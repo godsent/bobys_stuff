@@ -4,6 +4,8 @@
       { name: 'roses', quantity: 5 },
       { name: 'bottles of wine', quantity: 1 },
       { name: 'boxes of candies', quantity: 1},
+      { name: 'candles', quantity: 2 },
+      { name: 'bottles of massage oil', quantity: 1 },
       { name: 'condoms', quantity: 3 }
     ];
 
