@@ -1,0 +1,11 @@
+<ul ng-show='list.anyItem()'>
+  <li class='item' ng-repeat='item in list.items'>
+    <h3> {{ item.short_name }} ({{ item.name }}) </h3>
+    <button ng-click='list.removeItem({ index: $index })'>Remove</button>
+    <p> {{ item.description }} </p>
+  </li>
+</ul>
+
+<div ng-hide='list.anyItem()'>
+  Nothing found
+</div>
