@@ -21,7 +21,10 @@
         </button>
       </div>
       <div class='clearfix'></div>
-      <found-items items="ctrl.items" remove-item='ctrl.removeItem(index)' ></found-items>
+      <found-items items="ctrl.items"
+                   remove-item='ctrl.removeItem(index)'
+                   nothing-found='ctrl.nothingFound' >
+      </found-items>
     </div>
   </body>
 </html>

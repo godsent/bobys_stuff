@@ -2,6 +2,7 @@
 function NarrowItDownController(NarrowFilter) {
   this.items = [];
   this.keywords = '';
+  this.nothingFound = false;
   var filterer = new NarrowFilter(this);
 
   this.filter = function() {
@@ -10,9 +11,12 @@ function NarrowItDownController(NarrowFilter) {
     } else {
       this.items = [];
     }
+
+    this.nothingFound = this.items.length == 0;
   };
 
   this.removeItem = function(index) {
+    this.nothingFound = false;
     this.items.splice(index, 1);
   };
 }
@@ -65,7 +69,8 @@ function foundItemsConfig() {
     controller: 'FoundItemsController as list',
     scope: {
       items: '<',
-      removeItem: '&'
+      removeItem: '&',
+      nothingFound: '<'
     },
     bindToController: true
   }
