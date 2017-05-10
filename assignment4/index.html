@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>My Restaurant</title>
+    <script src='vendor/angular.min.js'></script>
+    <script src='vendor/angular-ui-router.min.js'></script>
+
+    <script src='app/menuapp.module.js'></script>
+    <script src='app/data.module.js'></script>
+
+
+    <script src='app/routes.js'></script>
+    <script src='app/menudata.service.js'></script>
+    <script src='app/categories.controller.js'></script>
+    <script src='app/categories.component.js'></script>
+    <script src='app/items.controller.js'></script>
+    <script src='app/items.component.js'></script>
+  </head>
+  <body ng-app='MenuApp'>
+    <ui-view><ui-view>
+  </body>
+</html>
