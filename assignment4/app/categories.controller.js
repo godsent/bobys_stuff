@@ -1,15 +1,8 @@
 (function() {
-function CategoriesController(MenuDataService) {
-  var vm = this;
-  vm.categories = [];
-
-  MenuDataService
-    .getAllCategories()
-    .then(function(categories) {
-      vm.categories = categories;
-    });
+function CategoriesController(categories) {
+  this.categories = categories;
 }
-CategoriesController.$inject = ['MenuDataService'];
+CategoriesController.$inject = ['categories'];
 
 angular.module('MenuApp')
   .controller('CategoriesController', CategoriesController);

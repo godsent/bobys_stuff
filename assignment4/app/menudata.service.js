@@ -17,7 +17,6 @@ function MenuDataService($http, INDEX_URL, SHOW_URL) {
         params: { category: categoryShortName }
       })
       .then(function(response) {
-        console.log(response.data.menu_items);
         return response.data.menu_items;
       });
   };
